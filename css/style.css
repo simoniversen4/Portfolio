@@ -1,0 +1,374 @@
+/* Fonts */
+
+@import url('https://fonts.googleapis.com/css2?family=Kristi&family=Montserrat:wght@500&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=PT+Sans+Narrow&family=Pacifico&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Source+Serif+Pro:wght@700&display=swap');
+
+/* Basis styling (mobile) */
+:root{ 
+    --clr-moss-0:rgb(159, 187, 109, 0.7);
+    --clr-moss-1: rgb(117, 139, 77, 0.7); 
+    --clr-moss-2: rgb(117, 139, 77, 1);
+
+    --clr-forest-0: rgb(67, 110, 60, 0.7);
+    --clr-forest-1: rgb(77, 126, 69);
+    --clr-forest-2: rgb(57, 93, 51, 1);
+
+    --clr-bg-dark-0: rgb(34, 34, 34, 0.9);
+    --clr-bg-dark-1: rgb(34, 34, 34, 1);
+    
+    --clr-bg-grey-1: rgb(44, 42, 42, 1);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    font-family: 'Montserrat', 'san-serif';
+    line-height: 1.2;
+    color: #fff;
+    background-color: var(--clr-bg-dark-1);
+}
+
+h1{
+    font-size: 1rem;
+    text-transform: uppercase;
+    margin: 15px auto;
+}
+
+h2{
+    font-family: 'Source Serif Pro';
+    text-transform: uppercase;
+    font-size: 2rem;
+    letter-spacing: 3px;
+    margin-bottom: 10px;
+}
+
+h3{
+    font-size: 1.5rem;
+    text-transform: uppercase;
+}
+
+h4{
+    font-size: 1.125rem;
+}
+
+p{
+    font-family: 'PT Sans Narrow', 'san-serif';
+    font-size: 1rem;
+    line-height: 1.5;
+}
+
+h3,
+h4,
+p{
+    margin-bottom: 10px;
+}
+
+a{
+    font-size: 1rem;
+}
+
+a{
+    text-decoration: none;
+    color: #fff;
+}
+
+img{
+    display: block;
+    max-width: 100%;
+    margin: 0 auto;
+}
+
+section{
+    padding: 6rem 0 ;
+}
+
+header,
+.banner-content,
+.projects{
+    margin-inline: auto;
+    width: min(80%, 90rem);
+}
+
+.split{
+    display: flex;
+    flex-direction: column;
+}
+
+.bg-dark{
+    background: var(--clr-bg-dark-1);
+}
+
+.bg-grey{
+    background: var(--clr-bg-grey-1);
+}
+
+/* --- Generel Styling (Desktop) --- */
+
+@media(min-width: 960px){
+    h2{
+        font-size: 2.75rem;
+    }
+    h3{
+        font-size: 1.875rem;
+    }
+    h4{
+        font-size: 1.375rem;
+    }
+    p{
+        font-size: 1.125rem;
+    }
+    h3,
+    h4,
+    p{
+        margin-bottom: 20px;
+    }
+    .split{
+        flex-direction: row;
+    }
+    .split > *{
+        flex-basis: 100%;
+    }
+    .split > * + *{
+        margin-left: 4em;
+    }
+    section{
+        padding: 10rem 0 ;
+    }
+}
+
+/* Header + navbar (mobile) */
+
+header{
+    background: var(--clr-bg-dark-0);
+    text-align: center;
+    position: fixed;
+    z-index: 999;
+    width: 100%;
+    line-height: 2;
+}
+
+nav{
+    position: absolute;
+    text-align: left;
+    top: 100%;
+    left: 0;
+    background: var(--clr-bg-dark-0);
+    width: 100%;
+    transform: scale(1,0);
+    transform-origin: top ;
+    transition: transform 350ms ease-in-out;
+}
+
+nav ul{
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+nav li{
+    margin-bottom: 1em;
+    margin-left: 1em;
+}
+
+nav a{
+    text-decoration: none;
+    opacity: 0;
+    transition: opacity 250s ease-in-out;
+}
+
+nav a:hover{
+    color: var(--clr-moss-2);
+}
+
+.nav-check:checked ~ nav{
+    transform: scale(1,1);
+}
+
+.nav-check:checked ~ nav a{
+    opacity: 1;
+    transition: opacity 300ms ease-in-out 300ms;
+}
+
+.nav-check{
+    display: none;
+}
+
+.nav-toggler{
+    position: absolute;
+    top: 0;
+    left: 0;
+    margin-left: 1em;
+    height: 100%;
+    display: flex;
+    align-items: center;
+}
+
+.nav-toggler span,
+.nav-toggler span::before,
+.nav-toggler span::after{
+    display: block;
+    background: #fff;
+    height: 3px;
+    width: 2em;
+    border-radius: 2px;
+    position: relative;
+}
+
+.nav-toggler span::before,
+.nav-toggler span::after{
+    content: '';
+    position: absolute;
+}
+
+.nav-toggler span::before{
+    bottom: 7px;
+}
+
+.nav-toggler span::after{
+    top: 7px;
+}
+
+/* Header + navbar (Desktop) */ 
+
+@media(min-width: 960px){
+    .nav-toggler{
+        display: none;
+    }
+    header{
+        display: grid;
+        grid-template-columns: 7em auto minmax(550px, 1fr) 7em;
+    }
+    .logo{
+        grid-column: 2 / 3;
+    }
+    nav{
+        all: unset;
+        grid-column: 3 / 4;
+        display: flex;
+        justify-content: flex-end;
+        align-items: center;
+    }
+    nav ul{
+        display: flex;
+        justify-content: flex-end;
+    }
+    nav li{
+        margin-left: 4em;
+        margin-bottom: 0;
+    }
+    nav a{
+        opacity: 1;
+        position: relative;
+    }
+    nav a:before{
+        content: '';
+        display: block;
+        height: 2px;
+        background: var(--clr-moss-2);
+        position: absolute;
+        bottom: -0.5em;
+        left: 0;
+        right: 0;
+        transform: scale(0,1);
+        transform-origin: left;
+        transition: transform ease-in-out 400ms;
+    }
+    nav a:hover::before{
+        transform: scale(1,-1);
+    }
+}
+
+/* Banner */
+
+.banner{
+    width: 100%;
+    height: auto;
+    background-image: url('../image/banner-image.jpg');
+    background-size: cover;
+}
+
+.banner-content{
+    padding-top: 10vh;
+    text-align: center;
+}
+
+.banner-content h4{
+    margin-bottom: 40px;
+}
+
+.banner-btn button{
+    width: 200px;
+    height: 45px;
+    border: none;
+    font-family: 'Montserrat', 'san-serif';
+    font-size: 1rem;
+    text-transform: uppercase;
+    color: #fff;
+    background: var(--clr-moss-0);
+    border-radius: 10px;
+    transition: ease-in-out 0.3s;
+    outline: none;
+    position: relative;
+    z-index: 1;
+}
+
+.banner-btn button:hover{
+    color: #fff;
+    cursor: pointer;
+}
+
+.banner-btn button:before{
+    transition: 0.5s all ease;
+    position: absolute;
+    top: 0;
+    left: 50%;
+    right: 50%;
+    bottom: 0;
+    opacity: 0;
+    content: '';
+    border-radius: 10px;
+    background: var(--clr-moss-1);
+}
+
+.banner-btn button:hover:before{
+    transition: 0.5s all ease;
+    left: 0;
+    right: 0;
+    opacity: 1;
+    z-index: -1;
+}
+
+.banner-2{
+    width: 100%;
+    height: auto;
+    background-image: url('../image/banner-image.jpg');
+    background-size: cover;
+}
+
+.banner-2, .banner-content-2{
+    text-align: center;
+}
+
+/* Case section */
+.cases{
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+  }
+
+  .case-link{
+    font-size: 1rem;
+    margin: 0px;
+  }
+
+  .case img{
+    width: 500px;
+  }
+
+  .case{
+    margin-bottom: 75px;
+  }
