@@ -1,34 +1,19 @@
 /* Fonts */
-
 @import url('https://fonts.googleapis.com/css2?family=Kristi&family=Montserrat:wght@500&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=PT+Sans+Narrow&family=Pacifico&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Source+Serif+Pro:wght@700&display=swap');
 
-/* Basis styling (mobile) */
-
-*{
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    font-family: "Montserret", sans-serif;
-}
-
-
-/* --- Generel Styling --- */
-
+/* Generel Styling (mobile) */
 :root{ 
-    --clr-moss-0:rgb(159, 187, 109, 0.7);
-    --clr-moss-1: rgb(117, 139, 77, 0.7); 
-    --clr-moss-2: rgb(117, 139, 77, 1);
+    --bg-primary: rgb(34, 34, 34, 1);
+    --bg-secondary: rgb(44, 42, 42, 1);
 
-    --clr-forest-0: rgb(67, 110, 60, 0.7);
-    --clr-forest-1: rgb(77, 126, 69);
-    --clr-forest-2: rgb(57, 93, 51, 1);
+    --clr-primary-moss: rgb(117, 139, 77, 1);
+   
+    --clr-primary-forest: rgb(77, 126, 69, 1);
+    --clr-secondary-forest: rgb(57, 93, 51, 1);
 
-    --clr-bg-dark-0: rgb(34, 34, 34, 0.9);
-    --clr-bg-dark-1: rgb(34, 34, 34, 1);
-    
-    --clr-bg-grey-1: rgb(44, 42, 42, 1);
+    --margin: clamp(20px, 6vw, 100px);
 }
 
 * {
@@ -40,7 +25,7 @@ body{
     font-family: 'Montserrat', 'san-serif';
     line-height: 1.2;
     color: #fff;
-    background-color: var(--clr-bg-dark-1);
+    background-color: var(--bg-primary);
 }
 
 h1{
@@ -69,13 +54,13 @@ h4{
 p{
     font-family: 'PT Sans Narrow', 'san-serif';
     font-size: 1rem;
-    line-height: 1.5;
+    line-height: 1.6;
 }
 
 h3,
 h4,
 p{
-    margin-bottom: 10px;
+    margin: 10px 0;
 }
 
 a{
@@ -93,14 +78,8 @@ img{
     margin: 0 auto;
 }
 
-section{
-    padding: 6rem 0 ;
-}
-
-header,
-section{
-    margin-inline: auto;
-    width: min(90%, 90rem);
+.text-center{
+    text-align: center;
 }
 
 .split{
@@ -108,16 +87,28 @@ section{
     flex-direction: column;
 }
 
-.bg-dark{
-    background: var(--clr-bg-dark-1);
+section{
+    padding: 4rem 0 ;
+
 }
 
-.bg-grey{
-    background: var(--clr-bg-grey-1);
+.about-me,
+.services,
+.cases-section,
+.contact-section{
+    margin-inline: auto;
+    width: min(80%, 90rem);
 }
 
-/* --- Generel Styling (Desktop) --- */
+.bg-primary{
+    background-color: var(--bg-primary);
+}
 
+.bg-secondary{
+    background-color: var(--bg-secondary);
+}
+
+/* Generel Styling (Desktop) */
 @media(min-width: 960px){
     h2{
         font-size: 2.75rem;
@@ -143,17 +134,16 @@ section{
         flex-basis: 100%;
     }
     .split > * + *{
-        margin-left: 1em;
+        margin-left: 4em;
     }
     section{
-        padding: 10rem 0 ;
+        padding: 6rem 0 ;
     }
 }
 
-/* --- Header + navbar --- */
-
+/* Header + navbar (mobile) */
 header{
-    background: var(--clr-bg-dark-0);
+    background: rgb(34, 34, 34, 0.8);
     text-align: center;
     position: fixed;
     z-index: 999;
@@ -166,7 +156,7 @@ nav{
     text-align: left;
     top: 100%;
     left: 0;
-    background: var(--clr-bg-dark-0);
+    background: rgb(34, 34, 34, 0.9);
     width: 100%;
     transform: scale(1,0);
     transform-origin: top ;
@@ -191,7 +181,7 @@ nav a{
 }
 
 nav a:hover{
-    color: var(--clr-moss-2);
+    color: var(--clr-primary-moss);
 }
 
 .nav-check:checked ~ nav{
@@ -242,8 +232,7 @@ nav a:hover{
     top: 7px;
 }
 
-/* --- Header + navbar (Desktop) --- */ 
-
+/* Header + navbar (Desktop) */ 
 @media(min-width: 960px){
     .nav-toggler{
         display: none;
@@ -278,7 +267,7 @@ nav a:hover{
         content: '';
         display: block;
         height: 2px;
-        background: var(--clr-moss-2);
+        background: var(--clr-primary-moss);
         position: absolute;
         bottom: -0.5em;
         left: 0;
@@ -292,27 +281,37 @@ nav a:hover{
     }
 }
 
+/* Banner landing page */
+.banner{
+    width: 100%;
+    height: auto;
+    background-image: url('../image/banner-image.jpg');
+    background-size: cover;
+}
 
+.banner-content{
+    text-align: center;
+    padding-top: 8vh;
+}
+
+/* Cases */
+.cases{
+    margin: auto var(--margin);
+    display: flex;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+}
 
 .box{
-    padding: 20px;
-    align-items: center;
+    padding: 15px;
+    margin-bottom: 2rem;
     border-radius: 5px;
-    background-color: var(--clr-bg-grey-1);
+    background-color: var(--bg-secondary);
     box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.2);
-    margin: 1em 0;
 }
 
-.box h3{
-    color: #fff;
-    padding: 10px 0;
-    font-size: 20px;
-}
-
-.box p{
-    color: #fff;
-    font-size: 14px;
-    line-height: 1.6;
+.box img{
+    border-radius: 5px;
 }
 
 .btn{
@@ -335,5 +334,21 @@ nav a:hover{
 .box:hover{
     transform: scale(1.03);
     box-shadow: 0 10px 15px rgba(0, 0, 0, 0.3);
+}
+
+/* --- Footer --- */
+
+footer{
+    text-align: center;
+}
+
+.social i{
+    font-size: 1.4rem;
+    margin: 40px 16px;
+}
+
+footer p{
+    font-size: 0.8rem;
+    padding-bottom: 20px;
 }
 
