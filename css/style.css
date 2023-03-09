@@ -3,7 +3,7 @@
 @import url('https://fonts.googleapis.com/css2?family=PT+Sans+Narrow&family=Pacifico&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Source+Serif+Pro:wght@700&display=swap');
 
-/* Generel Styling (mobile) */
+/* --- Generel Styling (mobile) --- */
 :root{ 
     --bg-primary: rgb(34, 34, 34, 1);
     --bg-secondary: rgb(44, 42, 42, 1);
@@ -37,7 +37,7 @@ h1{
 h2{
     font-family: 'Source Serif Pro';
     text-transform: uppercase;
-    font-size: 2rem;
+    font-size: 1.725rem;
     letter-spacing: 3px;
     margin-bottom: 10px;
 }
@@ -108,13 +108,13 @@ section{
     background-color: var(--bg-secondary);
 }
 
-/* Generel Styling (Desktop) */
+/* --- Generel Styling (Desktop) --- */
 @media(min-width: 960px){
     h2{
         font-size: 2.75rem;
     }
     h3{
-        font-size: 1.875rem;
+        font-size: 1.5rem;
     }
     h4{
         font-size: 1.375rem;
@@ -141,7 +141,7 @@ section{
     }
 }
 
-/* Header + navbar (mobile) */
+/* --- Header + navbar (mobile) --- */
 header{
     background: rgb(34, 34, 34, 0.8);
     text-align: center;
@@ -232,7 +232,7 @@ nav a:hover{
     top: 7px;
 }
 
-/* Header + navbar (Desktop) */ 
+/* --- Header + navbar (Desktop) --- */ 
 @media(min-width: 960px){
     .nav-toggler{
         display: none;
@@ -281,7 +281,7 @@ nav a:hover{
     }
 }
 
-/* Banner landing page */
+/* --- Banner landing page --- */
 .banner{
     width: 100%;
     height: auto;
@@ -291,7 +291,102 @@ nav a:hover{
 
 .banner-content{
     text-align: center;
-    padding-top: 8vh;
+    padding-top: 10vh;
+}
+
+/* --- Content --- */
+
+/* Knapper */
+.btn{
+    text-transform: uppercase;
+    border: none;
+    outline: none;
+    font-size: 1rem;
+    margin-top: 10px;
+    padding: 10px 36px;
+    background: var(--clr-primary-forest);
+    border-radius: 5px;
+    display: inline-block;
+    text-decoration: none;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    -webkit-transition-duration: 0.3s;
+    transition-duration: 0.3s;
+    -webkit-transition-property: box-shadow, transform;
+    transition-property: box-shadow, transform;
+}
+
+.btn:hover,
+.btn:focus,
+.btn:active{
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.3);
+    -webkit-transform: scale(1.1);
+    transform: scale(1.1);
+}
+
+/* Services */
+.services h3{
+    margin-bottom: 40px;
+}
+
+.services .box{
+    position: relative;
+    height: 250px;
+    margin: 10px;
+}
+
+.services .box .icon i{
+    position: absolute;
+    top: 10px;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    font-size: 35px;
+    margin-top: 40px;
+}
+
+.services .box .text{
+    margin-top: 90px;
+}
+
+.services .box h4,
+.services .box p,
+.services .box .btn{
+    text-align: center;
+}
+
+#card{
+    background-color: var(--clr-secondary-forest);
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+#card:hover{
+    background-color: var(--clr-primary-forest);
+}
+
+/* Cases landing page */
+
+
+/* Contact */
+
+.contact-section img{
+    display: block;
+    max-width: 100%;
+    margin: 0 auto;
+    margin-bottom: 40px;
+}
+
+.contact-info p{
+    margin-bottom: 40px;
+}
+
+.contact-info ul li{
+    list-style: none;
+    font-size: 0.7rem;
+    margin-bottom: 30px;
+}
+
+.contact-info ul li i{
+    margin-right: 10px;
 }
 
 /* Cases */
@@ -307,33 +402,41 @@ nav a:hover{
     margin-bottom: 2rem;
     border-radius: 5px;
     background-color: var(--bg-secondary);
-    box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.2);
+    box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.1);
 }
 
 .box img{
     border-radius: 5px;
 }
 
-.btn{
-    color: green;
-    border: none;
-    outline: none;
-    font-size: 17px;
-    margin-top: 10px;
-    padding: 8px 15px;
-    background: #444;
-    border-radius: 5px;
-    display: inline-block;
-    text-decoration: none;
-}
-
-.btn:hover{
-    letter-spacing: 1px;
-}
-
 .box:hover{
     transform: scale(1.03);
     box-shadow: 0 10px 15px rgba(0, 0, 0, 0.3);
+}
+
+/* --- Content (Desktop) --- */
+
+@media(min-width: 720px){
+    .contact-info ul li,
+    .work-area ul li,
+    .work-area-2 ul li{
+        font-size: 1rem;
+    }
+    .project-info{
+        margin-left: 5rem;
+    }
+}
+
+@media(min-width: 960px){
+    .about-me img{
+        margin-bottom: 0;
+    }
+    .contact-info ul li{
+        font-size: 1.125rem;
+    }
+    .services .box{
+        height: 300px;
+    }
 }
 
 /* --- Footer --- */
