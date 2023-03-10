@@ -134,7 +134,7 @@ section{
         flex-basis: 100%;
     }
     .split > * + *{
-        margin-left: 4em;
+        margin-left: 2em;
     }
     section{
         padding: 6rem 0 ;
@@ -284,14 +284,19 @@ nav a:hover{
 /* --- Banner landing page --- */
 .banner{
     width: 100%;
-    height: auto;
     background-image: url('../image/banner-image.jpg');
     background-size: cover;
 }
 
 .banner-content{
     text-align: center;
-    padding-top: 10vh;
+    padding: 14vh 0;
+}
+
+/* Small banner */
+.banner-content2{
+    text-align: center;
+    padding-top: 9vh;
 }
 
 /* --- Content --- */
@@ -363,11 +368,38 @@ nav a:hover{
     background-color: var(--clr-primary-forest);
 }
 
-/* Cases landing page */
-
+/* Gallery */
+#gallery{
+    height: auto;
+    flex-shrink: 0.8;
+}
+#bubbles{
+    width: auto;
+    margin: 0 auto;
+    text-align: center;
+    white-space: nowrap;
+}
+#bubbles > div{
+    display: inline-block;
+    width: 10px;
+    height: 10px;
+    margin: 24px 10px 0px 10px;
+    background: rgba(0, 0, 0, .1);
+    text-align: center;
+    border: 2px solid var(--clr-primary-forest);
+    border-radius: 100%;
+    text-decoration: none;
+    transition: all 0.3s linear 0s;
+    cursor: pointer;
+  }
+  #gallery-content{
+    transition: 0.3s linear 0s;
+  }
+  #gallery-content > img{
+    height: 350px;
+  }
 
 /* Contact */
-
 .contact-section img{
     display: block;
     max-width: 100%;
@@ -415,7 +447,6 @@ nav a:hover{
 }
 
 /* --- Content (Desktop) --- */
-
 @media(min-width: 720px){
     .contact-info ul li,
     .work-area ul li,
@@ -454,4 +485,6 @@ footer p{
     font-size: 0.8rem;
     padding-bottom: 20px;
 }
+
+
 

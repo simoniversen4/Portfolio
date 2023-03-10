@@ -9,6 +9,7 @@
         <title>Simon Østergaard</title>
         <link rel="stylesheet" href="css/style.css">
         <script src="https://kit.fontawesome.com/f9361c2581.js" crossorigin="anonymous"></script>
+        <script src="js/script.js" defer></script>
     </head>
   
     <body>
@@ -44,7 +45,7 @@
                 <div class="about-me">
                     <div class="split">
                         <div>
-                            <img src="image/image2.jpg" alt="portrait">  
+                            <img src="image/portrait1.png" alt="">  
                         </div>
                         <div>
                             <h3>Det her er mig</h3>
@@ -112,18 +113,28 @@
                             </p>
                             <a href="#" class="btn">Se mere</a>
                         </div>
-                        <div>
-                            <img src="image/image3.jpg" alt="person working on macbook">  
+                        <!-- Bobbel galleri med services er her-->
+                        <div id="gallery">
+                            <div id="gallery-content">
+                            <img src="image/mellow-gallery.png" alt="" class="gallery-img">
+                            </div>
+                            <div id="bubbles">
+                                <div onclick="bubbles(0); clearInterval(intrvl);" style="background: rgb(77, 126, 69);"></div>
+                                <div onclick="bubbles(1); clearInterval(intrvl);"></div>
+                                <div onclick="bubbles(2); clearInterval(intrvl);"></div>
+                                <div onclick="bubbles(3); clearInterval(intrvl);"></div>
+                                <div onclick="bubbles(4); clearInterval(intrvl);"></div>
+                            </div>
                         </div>
                     </div>
                 </div>
             </section>
-            
+
             <section class="bg-secondary">
                 <div class="contact-section">
                     <div class="split">
                         <div>
-                            <img src="image/image4.jpg" alt="photographer taking portrait of a person">  
+                            <img src="image/portriat2.png" alt="">  
                         </div>
                         <div class="contact-info">
                             <h3>Find mig her</h3>
