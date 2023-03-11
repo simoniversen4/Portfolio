@@ -276,14 +276,14 @@ nav a:hover{
 
 /* --- Content --- */
 
-/* Knapper */
+/* Button */
 .btn{
     text-transform: uppercase;
     border: none;
     outline: none;
     font-size: 1rem;
     margin-top: 10px;
-    padding: 10px 36px;
+    padding: 10px 46px;
     background: var(--clr-primary-forest);
     border-radius: 5px;
     display: inline-block;
@@ -495,7 +495,6 @@ footer{
 .social i{
     font-size: 1.4rem;
     margin: 40px 16px;
-    color: var(--clr-primary-forest);
 }
 footer p{
     font-size: 0.8rem;
