@@ -9,6 +9,7 @@
         <title>Simon Østergaard</title>
         <link rel="stylesheet" href="../css/style.css">
         <script src="https://kit.fontawesome.com/f9361c2581.js" crossorigin="anonymous"></script>
+        <script src="../js/om_mig_script.js" defer></script>
     </head>
   
     <body>
@@ -44,7 +45,7 @@
                 <div class="about-me">
                     <div class="split">
                         <div>
-                            <img src="../image/image11.jpg" alt="portrait of person with camera">  
+                            <img src="../image/portrait3.png" alt="">  
                         </div>
                         <div>
                             <h3>Lidt om mig</h3>
@@ -68,7 +69,7 @@
                         <div>
                             <h3>Hvad brænder jeg for?</h3>
                             <p>Jeg har altid været kreativ. Foto og video har fanget min interesse siden jeg var helt lille. 
-                            <br><br>Jeg blev fanget af muligheden, for at kunne fortælle historier gennem et kamera. Jeg brænder 
+                            Jeg blev fanget af muligheden, for at kunne fortælle historier gennem et kamera. Jeg brænder 
                             derfor, for at fortælle både mine egne historier, men også dine eller din virksomheds, hvad end det 
                             er gennem billeder eller videoer.<br><br>Når jeg ikke er i skole eller på en anden arbejdsopgave, 
                             bruger jeg en del tid på at fortælle og dele mine egne historier. Til dette har jeg en instagram 
@@ -77,8 +78,17 @@
                             ud herunder</p>
                             <a href="#" class="btn">Se mere</a>
                         </div>
-                        <div>
-                            <img src="../image/image12.jpg" alt="person standing in mountains looking at sunset">  
+                        <div id="gallery2">
+                            <div id="gallery-content2">
+                            <img src="../image/slide1-me.png" alt="" class="gallery-img2">
+                            </div>
+                            <div id="bubbles2">
+                                <div onclick="bubbles(0); clearInterval(intrvl);" style="background: rgb(77, 126, 69);"></div>
+                                <div onclick="bubbles(1); clearInterval(intrvl);"></div>
+                                <div onclick="bubbles(2); clearInterval(intrvl);"></div>
+                                <div onclick="bubbles(3); clearInterval(intrvl);"></div>
+                                <div onclick="bubbles(4); clearInterval(intrvl);"></div>
+                            </div>
                         </div>
                     </div>
                 </div>  

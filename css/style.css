@@ -36,25 +36,20 @@ h2{
 h3{
     font-size: 1.5rem;
     text-transform: uppercase;
+    margin-top: 20px;
 }
 h4{
     font-size: 1rem;
     text-transform: uppercase;
+    margin-top: 20px;
 }
 p{
     font-family: 'PT Sans Narrow', 'san-serif';
     font-size: 1rem;
     line-height: 1.6;
 }
-h3,
-h4,
-p{
-    margin: 10px 0;
-}
 a{
     font-size: 1rem;
-}
-a{
     text-decoration: none;
     color: #fff;
 }
@@ -271,7 +266,7 @@ nav a:hover{
 /* Small banner */
 .banner-content2{
     text-align: center;
-    padding-top: 9vh;
+    padding-top: 4vh;
 }
 
 /* --- Content --- */
@@ -300,6 +295,16 @@ nav a:hover{
     box-shadow: 0 0 20px rgba(0, 0, 0, 0.3);
     -webkit-transform: scale(1.1);
     transform: scale(1.1);
+}
+
+.about-me .btn,
+.cases-section .btn{
+    margin-top: 30px;
+}
+
+/* About me */
+.about-me img{
+    margin-bottom: 40px;
 }
 
 /* Services */
@@ -337,17 +342,20 @@ nav a:hover{
 .cases-section .btn{
     margin-bottom: 40px;
 }
-#gallery{
+#gallery,
+#gallery2{
     height: auto;
     flex-shrink: 0.8;
 }
-#bubbles{
+#bubbles,
+#bubbles2{
     width: auto;
     margin: 0 auto;
     text-align: center;
     white-space: nowrap;
 }
-#bubbles > div{
+#bubbles > div,
+#bubbles2 > div{
     display: inline-block;
     width: 10px;
     height: 10px;
@@ -360,16 +368,21 @@ nav a:hover{
     transition: all 0.3s linear 0s;
     cursor: pointer;
 }
-#gallery-content{
+#gallery-content,
+#gallery-content2{
     transition: 0.3s linear 0s;
 }
 #gallery-content > img{
     height: 350px;
 }
+#gallery-content2 > img{
+    height: 500px;
+}
 
 /* Kontakt formular */
 .contact-section img{
     padding-top: 30px;
+    margin-bottom: 40px;
 }
 .contact-info{
     padding-top: 6em;
