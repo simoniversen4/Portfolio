@@ -485,6 +485,11 @@ form button{
     grid-template-columns: repeat(auto-fit, minmax(285px, 1fr));
     grid-auto-rows: auto; 
 }  
+.overline{
+    opacity: 0.5;
+    font-size: 0.8rem;
+    margin-bottom: 5px;
+}
 
 /* --- Content (Desktop) --- */
 @media(min-width: 720px){
