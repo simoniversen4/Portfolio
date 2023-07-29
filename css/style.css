@@ -258,7 +258,7 @@ nav a:hover{
 /* --- Banner landing page --- */
 .banner{
     width: 100%;
-    background-image: url('../image/banner-image.jpg');
+    background-image: url('../banner-image/banner-image.jpg');
     background-size: cover;
 }
 .banner-content{
@@ -363,7 +363,7 @@ nav a:hover{
 
 /* Kontakt formular */
 .contact-section img{
-    padding-top: 30px;
+    padding-top: 40px;
     margin-bottom: 40px;
 }
 .contact-info{
