@@ -363,6 +363,9 @@ nav a:hover{
     padding-top: 40px;
     margin-bottom: 40px;
 }
+.contact-info h3{
+    margin-top: 0;
+}
 .contact-info p{
     margin-bottom: 5px;
 }
@@ -487,6 +490,14 @@ form button{
 @media(min-width: 720px){
     .contact-info{
         padding-top: 6em;
+    }
+    .contact-info h3{
+        margin-top: 20;
+    }
+}
+@media(max-width: 768px){
+    .contact-info{
+        padding-top: 0;
     }
 }
 /* --- Footer --- */
