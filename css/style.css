@@ -314,16 +314,6 @@ nav a:hover{
     margin-top: 30px;
 }
 
-.break-section{
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-}
-  
-.break-section .btn{
-    margin-left: auto;
-}
-
 /* About me */
 .about-me img{
     margin-bottom: 40px;
@@ -366,9 +356,6 @@ nav a:hover{
     background-color: var(--clr-primary-forest);
     cursor: pointer;
     transition: all 0.3s ease;
-}
-.break-section{
-    margin-top: 50px;
 }
 
 /* Kontakt formular */
